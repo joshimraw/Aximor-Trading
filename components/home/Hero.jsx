@@ -2,43 +2,66 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#0a192f] overflow-hidden py-20 lg:py-32">
-      {/* Background Glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 blur-[120px] rounded-full -mr-40 -mt-20"></div>
+    <section className="relative min-h-[90vh] flex items-center justify-center bg-[#0a192f] overflow-hidden">
+      {/* Dynamic Background Elements */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600/10 blur-[100px] rounded-full"></div>
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-orange-600/10 blur-[120px] rounded-full"></div>
       
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Left Column (Text & CTAs) */}
-        <div>
-          <h1 className="text-4xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-            Smart Software Solutions <br /> 
-            <span className="text-blue-400 text-3xl lg:text-5xl">for Modern Businesses</span>
+      {/* Decorative Grid Overlay */}
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 pointer-events-none"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="flex flex-col items-center text-center">
+          
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/5 text-blue-400 text-xs font-bold uppercase tracking-widest mb-8 animate-fade-in">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            Innovation for Enterprise
+          </div>
+
+          {/* Headline */}
+          <h1 className="text-5xl lg:text-7xl font-black text-white leading-[1.1] mb-8 max-w-4xl tracking-tight">
+            Engineering the Future of <br />
+            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-orange-400 bg-clip-text text-transparent">
+              Scalable Commerce.
+            </span>
           </h1>
-          <p className="text-slate-400 text-lg mb-10 max-w-lg leading-relaxed">
-            We build powerful eCommerce platforms, ERP systems, and HRM software to grow your business with cutting-edge technology.
+
+          {/* Subtext */}
+          <p className="text-slate-400 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed font-light">
+            Aximor Trading builds high-performance eCommerce, ERP, and HRM software 
+            that transforms complex business data into seamless user experiences.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-md font-bold transition-all shadow-lg shadow-orange-900/20">
-              Get a Quote
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-5 mb-20">
+            <button className="px-10 py-4 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full transition-all hover:scale-105 shadow-[0_0_20px_rgba(234,88,12,0.3)]">
+              Get Started Now
             </button>
-            <button className="border border-slate-500 hover:bg-white/5 text-white px-8 py-4 rounded-md font-bold transition-all">
-              Contact Us
+            <button className="px-10 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-full transition-all backdrop-blur-sm">
+              View Portfolio
             </button>
           </div>
-        </div>
-        
-        {/* Right Column (New Optimized Image Implementation) */}
-        <div className="flex justify-center relative">
-          <div className="w-full h-auto aspect-video max-w-3xl lg:max-w-none">
-            {/* Optimized Next.js Image component */}
-            <Image 
-              src="/home/hero-illustration.png" // Path relative to the /public folder
-              alt="Aximor Trading Analytics Dashboard and Modular Data Cubes"
-              width={1600} // Based on standard generated dimensions
-              height={900} 
-              priority // Crucial for Largest Contentful Paint (LCP) SEO
-              className="object-contain drop-shadow-2xl" 
-            />
+
+          {/* The Hero Visual: Floating App Shell */}
+          <div className="relative w-full max-w-5xl mx-auto group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-orange-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            <div className="relative bg-[#0d2137] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
+               {/* Use the image we generated earlier */}
+              <Image 
+                src="/home/hero-illustration.png" 
+                alt="Aximor Software Dashboard" 
+                width={1200} 
+                height={600} 
+                className="w-full h-auto object-cover opacity-90 transition-transform duration-700 group-hover:scale-[1.02]"
+                priority
+              />
+            </div>
           </div>
+
         </div>
       </div>
     </section>
