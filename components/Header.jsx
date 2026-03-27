@@ -86,13 +86,13 @@ export default function Header() {
             </div>
 
             <a href="/about" className="text-sm font-bold text-slate-300 hover:text-white transition-colors">About Us</a>
-            <a href="/portfolio" className="text-sm font-bold text-slate-300 hover:text-white transition-colors">Portfolio</a>
+            <a href="/contact" className="text-sm font-bold text-slate-300 hover:text-white transition-colors">Contact</a>
           </nav>
 
           <div className="hidden lg:flex flex-1 justify-end">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all flex items-center gap-2">
+            <a href='/quote' className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all flex items-center gap-2">
               Get a Quote <ArrowRight size={16} />
-            </button>
+            </a>
           </div>
         </div>
       </header>
@@ -136,7 +136,7 @@ export default function Header() {
             </div>
 
             <a href="/about" className="text-lg font-bold text-white border-b border-white/5 pb-2">About Us</a>
-            <a href="/portfolio" className="text-lg font-bold text-white border-b border-white/5 pb-2">Portfolio</a>
+            <a href="/portfolio" className="text-lg font-bold text-white border-b border-white/5 pb-2">Contact</a>
             
             <button className="mt-6 w-full bg-orange-600 text-white py-4 rounded-xl font-bold shadow-lg">
               Get Started Now
