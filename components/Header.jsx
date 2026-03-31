@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown, ArrowRight, ShoppingCart, LayoutGrid, Users, Code } from 'lucide-react';
+import Image from 'next/image';
 
 const serviceItems = [
   { name: "eCommerce Dev", icon: <ShoppingCart size={16} />, href: "/services/ecommerce" },
@@ -47,7 +48,12 @@ export default function Header() {
           </button>
 
           <div className="flex items-center gap-3 group lg:flex-1">
-            <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center font-black text-white italic shadow-lg shadow-orange-600/20">X</div>
+            <Image
+            src="/aximor-logo.png"
+            alt="Aximor Logo"
+            width="60"
+            height="40"
+             />
             <div className="flex flex-col uppercase tracking-tighter">
               <span className="text-white font-black text-xl leading-none">Aximor</span>
               <span className="text-orange-500 font-bold text-[10px] tracking-[0.3em]">Trading</span>

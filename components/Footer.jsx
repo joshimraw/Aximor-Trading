@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, Send } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -12,7 +13,12 @@ export default function Footer() {
           {/* Brand Column (4 Cols) */}
           <div className="md:col-span-4 space-y-8">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center font-black text-white italic shadow-lg shadow-orange-600/20">X</div>
+              <Image
+                src="/aximor-logo.png"
+                alt="Aximor Logo"
+                width="60"
+                height="40"
+                  />
               <div>
                 <span className="text-white font-bold text-xl tracking-tight block leading-none">AXIMOR</span>
                 <span className="text-orange-500 font-light text-[10px] tracking-[0.3em] uppercase">Trading</span>
