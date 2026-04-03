@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link'; // Import Link
 import { ArrowRight } from 'lucide-react';
 
 const services = [
@@ -6,25 +7,29 @@ const services = [
     title: "eCommerce Development", 
     desc: "High-performance online stores built for conversion and speed.", 
     image: "/home/ecommerce.jpg",
-    accent: "border-blue-500"
+    accent: "border-blue-500",
+    href: "/services/ecommerce" // Added href
   },
   { 
     title: "ERP Solutions", 
     desc: "Centralize your business operations with robust data management.", 
     image: "/home/erp.jpg", 
-    accent: "border-orange-500"
+    accent: "border-orange-500",
+    href: "/services/erp" // Added href
   },
   { 
     title: "HRM Software", 
     desc: "Intelligent workforce management tools that scale with your team.", 
     image: "/home/hrm.jpg", 
-    accent: "border-blue-400"
+    accent: "border-blue-400",
+    href: "/services/hrm" // Added href
   },
   { 
     title: "Custom Web Apps", 
     desc: "Tailor-made digital solutions for unique enterprise challenges.", 
     image: "/home/app.jpg", 
-    accent: "border-indigo-500"
+    accent: "border-indigo-500",
+    href: "/services/custom" // Added href
   },
 ];
 
@@ -42,9 +47,13 @@ export default function OurServices() {
               Premium Digital Solutions <br /> For Global Enterprises
             </h3>
           </div>
-          <button className="text-[#0a192f] font-bold flex items-center gap-2 hover:gap-4 transition-all border-b-2 border-orange-500 pb-1 w-fit">
+          {/* Link to the main services overview page */}
+          <Link 
+            href="/services" 
+            className="text-[#0a192f] font-bold flex items-center gap-2 hover:gap-4 transition-all border-b-2 border-orange-500 pb-1 w-fit"
+          >
             View All Services <ArrowRight size={20} />
-          </button>
+          </Link>
         </div>
 
         {/* Services Grid */}
@@ -57,7 +66,6 @@ export default function OurServices() {
               {/* Image Placeholder Container */}
               <div className="relative h-48 bg-slate-200 overflow-hidden">
                 <div className={`absolute inset-0 bg-gradient-to-t from-[#0a192f]/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity`} />
-                {/* Fallback box if image doesn't exist yet */}
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
                    <span className="text-slate-400 font-bold text-xs uppercase tracking-widest">Service Preview</span>
                 </div>
@@ -71,7 +79,6 @@ export default function OurServices() {
 
               {/* Content */}
               <div className="p-6 relative">
-                {/* Accent bar that appears on hover */}
                 <div className={`absolute top-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-500 ${s.accent.replace('border', 'bg')}`} />
                 
                 <h4 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-blue-600 transition-colors">
@@ -80,9 +87,13 @@ export default function OurServices() {
                 <p className="text-slate-500 text-sm leading-relaxed mb-6">
                   {s.desc}
                 </p>
-                <a href="#" className="text-xs font-bold uppercase tracking-widest text-slate-400 group-hover:text-orange-600 flex items-center gap-2 transition-colors">
+                {/* Dynamic link to single service page */}
+                <Link 
+                  href={s.href} 
+                  className="text-xs font-bold uppercase tracking-widest text-slate-400 group-hover:text-orange-600 flex items-center gap-2 transition-colors"
+                >
                   Learn More <ArrowRight size={14} />
-                </a>
+                </Link>
               </div>
             </div>
           ))}

@@ -56,7 +56,7 @@ export default function Header() {
              />
             <div className="flex flex-col uppercase tracking-tighter">
               <span className="text-white font-black text-xl leading-none">Aximor</span>
-              <span className="text-orange-500 font-bold text-[10px] tracking-[0.3em]">Trading</span>
+              <span className="text-orange-500 font-bold text-[10px] tracking-[0.3em]">Technology</span>
             </div>
           </div>
           

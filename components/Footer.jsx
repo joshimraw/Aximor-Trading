@@ -21,7 +21,7 @@ export default function Footer() {
                   />
               <div>
                 <span className="text-white font-bold text-xl tracking-tight block leading-none">AXIMOR</span>
-                <span className="text-orange-500 font-light text-[10px] tracking-[0.3em] uppercase">Trading</span>
+                <span className="text-orange-500 font-light text-[10px] tracking-[0.3em] uppercase">Technology</span>
               </div>
             </div>
             <p className="text-sm leading-relaxed max-w-sm">
@@ -57,10 +57,10 @@ export default function Footer() {
               Services
             </h4>
             <ul className="space-y-4 text-sm font-medium">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">ERP Systems</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">HRM Software</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">eCommerce</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Custom Dev</a></li>
+              <li><a href="/services/erp" className="hover:text-blue-400 transition-colors">ERP Systems</a></li>
+              <li><a href="/services/hrm" className="hover:text-blue-400 transition-colors">HRM Software</a></li>
+              <li><a href="/services/ecommerce" className="hover:text-blue-400 transition-colors">eCommerce</a></li>
+              <li><a href="/services/custom" className="hover:text-blue-400 transition-colors">Custom Dev</a></li>
             </ul>
           </div>
 
